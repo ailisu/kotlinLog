@@ -2,25 +2,36 @@ package jp.techacademy.syouya.ueki.kotlinlog
 
 import android.util.Log
 
-open class Human: Animal {
-    val hobby = String() + "${"String"}"
+
+    open class Human:Animal, Thinkble{
+    //プロパティ
+        var hobby :String
 
     //引数付きコンストラクタ
 
-    constructor(name: String, age: Int): super(name, age){
-
-        this.name = ""
-        this.age = 0
+    constructor(name: String, age: Int) : super(name, age) {
+     this.hobby = ""
 
     }
     //Animalクラスのメソッドをオーバーライド
-       override  fun say() {
-        Log.d("kotlintest", this.name + "("+ this.age +"歳)" +"「私の名前は～～です。年は～～歳です。」"+ "(～～はメンバ変数から取得)")
+    override fun say() {
+        Log.d("kotlintest",   "「私の名前は " + this.name + "です。" + "年は"  + this.age + "歳です。」")
     }
+
     //thinkbleインターフェースのメソッドをオーバーライド
-        fun think() {
-        Log.d("kotlintest", this.name + "("+ this.age +"歳)" +"「私は～～について考える。」"+ "(～～はhobbyから取得)")
+      override fun think() {
+        Log.d("kotlintest",  "「私は" +  this.hobby + "について考える。" )
+
+
+
 
     }
+    }
 
-}
+
+
+
+
+
+
+
