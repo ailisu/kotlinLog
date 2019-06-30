@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
      val human = Human("こうき",18)
+     val hobby = Human("メソッド",0)
 
-
-        human.think()
+        hobby.think()
         human.say()
 
 

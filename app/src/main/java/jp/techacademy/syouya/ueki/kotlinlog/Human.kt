@@ -10,8 +10,7 @@ import android.util.Log
     //引数付きコンストラクタ
 
     constructor(name: String, age: Int) : super(name, age) {
-     this.hobby = ""
-
+     this.hobby = "メソッド"
     }
     //Animalクラスのメソッドをオーバーライド
     override fun say() {
